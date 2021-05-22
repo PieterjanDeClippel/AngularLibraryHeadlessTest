@@ -4,8 +4,7 @@
   "compilerOptions": {
     "paths": {
       "@mintplayer/ng-router": [
-        "dist/mintplayer/ng-router/mintplayer-ng-router",
-        "dist/mintplayer/ng-router"
+        "projects/mintplayer/ng-router/src/public-api.ts"
       ]
     },
     "baseUrl": "./",
