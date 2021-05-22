@@ -3,5 +3,46 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "@mintplayer/ng-router": {
+      "projectType": "library",
+      "root": "projects/mintplayer/ng-router",
+      "sourceRoot": "projects/mintplayer/ng-router/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/mintplayer/ng-router/tsconfig.lib.json",
+            "project": "projects/mintplayer/ng-router/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/mintplayer/ng-router/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/mintplayer/ng-router/src/test.ts",
+            "tsConfig": "projects/mintplayer/ng-router/tsconfig.spec.json",
+            "karmaConfig": "projects/mintplayer/ng-router/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/mintplayer/ng-router/tsconfig.lib.json",
+              "projects/mintplayer/ng-router/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "@mintplayer/ng-router"
 }

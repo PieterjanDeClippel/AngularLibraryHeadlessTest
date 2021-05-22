@@ -2,6 +2,12 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "@mintplayer/ng-router": [
+        "dist/mintplayer/ng-router/mintplayer-ng-router",
+        "dist/mintplayer/ng-router"
+      ]
+    },
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
